@@ -12,12 +12,6 @@ struct task {
     bool status;
 };
 
-struct user {
-    char name[50];
-    char password[50];
-    struct task* tasks;  // user's task list
-    struct user* next;
-};
 
 void addTask(struct task** head) {
     struct task* newTask = (struct task*)malloc(sizeof(struct task));
