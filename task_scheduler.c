@@ -234,19 +234,7 @@ int main() {
             case 7:
                 loadTasksFromFile(&taskList);
                 break;
-            case 8:
-                // Cleanup and exit
-                while (taskList != NULL) {
-                    struct task* temp = taskList;
-                    taskList = taskList->next;
-                    free(temp);
-                }
-                while (userList != NULL) {
-                    struct user* temp = userList;
-                    userList = userList->next;
-                    free(temp);
-                }
-                break;
+
             default:
                 printf("Invalid choice. Please enter a valid option.\n");
         }
